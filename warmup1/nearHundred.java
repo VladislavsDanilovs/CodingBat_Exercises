@@ -10,18 +10,10 @@ nearHundred(89) → false
 
 public class nearHundred {
     public static void main(String[] args) {
-        System.out.println(nearHundred(111));
+        System.out.println(nearHundred(93));
     }
     public static boolean nearHundred(int n) {
-        if(n < 90) {
-            return false;
-        } else if( n > 110 && n < 190){
-            return false;
-        } else if (n > 210){
-            return false;
-        } else {
-            return true;
-        }
+        return ((n < 90) || ( n > 110 && n < 190) || (n > 210)) ? false : true;
     }
     //solution using Math.abs:
 
