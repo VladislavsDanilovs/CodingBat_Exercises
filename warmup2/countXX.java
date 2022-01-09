@@ -16,23 +16,13 @@ public class countXX {
     }
 
     static int countXX(String str) {
-        String result = "";
-        char x = 'x';
         int counter = 0;
-        if (!str.contains("x")) {
-            return 0;
-        }
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == x) {
-                counter++;
-                result += 'x';
+        if (str.length() > 1) {
+            for (int i = 1; i < str.length(); i++) {
+                if (str.charAt(i - 1) == 'x' && str.charAt(i) == 'x') {
+                    counter++;
+                }
             }
-        }
-        if (result.length() >= 4 || result.length() >= 2) {
-            counter--;
-        }
-        if (str.length() > 10) {
-            counter--;
         }
         return counter;
     }
